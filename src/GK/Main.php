@@ -1,7 +1,7 @@
 <?php
 namespace GK;
 
-
+use pocketmine\item\Item;
 use pocketmine\command\CommandExecutor;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -13,18 +13,21 @@ use pocketmine\command\ConsoleCommandSender;
 class Main extends PluginBase implements Listener
 {
 public function onEnable() {
-		//tbh idk this will work
-
+	
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		
 		}
 		 public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
         if(strtolower($cmd->getName()) === "givekey") {
-        if($sender instanceof Player){
-          if(isset($args[0])) {
-                $amount = $args[0];
+        
+          
+               
         foreach($this->getServer()->getOnlinePlayers() as $p){
-        $p->getInventory()->addItem(341,0, $args);
+        if($sender instanceof Player){
+        if(isset($args[0])) {
+                $amount = $args[0];
+       foreach($args as $item){
+        $p->getInventory()->addItem(Item::get(Item::SLIMEBALL,0,$item));
         $p->sendMessage($sender->getName()." gave you ".$amount." CrateKeys!");
         return true;
                 }
@@ -34,6 +37,7 @@ public function onEnable() {
                 }else{
       $sender->sendMessage("Please do this command in-game");
       return false;
+                }
                 }
                 }
                 }
