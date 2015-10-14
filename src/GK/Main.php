@@ -19,14 +19,10 @@ public function onEnable() {
 		}
 		 public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
         if(strtolower($cmd->getName()) === "givekey") {
-        
-          
-               
-      
         if($sender instanceof Player){
         if(isset($args[0])) {
                 $amount = $args[0];
-                foreach($args as $item(){
+                foreach($args as $item){
         foreach($this->getServer()->getOnlinePlayers() as $p){
         $p->getInventory()->addItem(Item::get(Item::SLIMEBALL,0,$item));
        }
