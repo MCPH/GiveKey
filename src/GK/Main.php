@@ -13,7 +13,7 @@ use pocketmine\command\ConsoleCommandSender;
 class Main extends PluginBase implements Listener
 {
 public function onEnable() {
-		
+		//tbh idk this will work
 
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		
