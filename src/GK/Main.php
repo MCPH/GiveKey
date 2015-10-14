@@ -27,7 +27,7 @@ public function onEnable() {
         $p->getInventory()->addItem(Item::get(Item::SLIMEBALL,0,$item));
        }
         }
-        $p->sendMessage($sender->getName()." gave you ".$amount." CrateKeys!");
+        $p->sendMessage($sender->getName()." gave you ".$item." CrateKeys!");
         return true;
                 }else{
                 $sender->sendMessage("usage: /givekey (amount)");
