@@ -25,10 +25,10 @@ public function onEnable() {
                 foreach($args as $item){
         foreach($this->getServer()->getOnlinePlayers() as $p){
         $p->getInventory()->addItem(Item::get(Item::SLIMEBALL,0,$item));
-       }
-        }
         $p->sendMessage($sender->getName()." gave you ".$item." CrateKeys!");
         return true;
+                }
+                }
                 }else{
                 $sender->sendMessage("usage: /givekey (amount)");
                 }
