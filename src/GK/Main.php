@@ -22,15 +22,17 @@ public function onEnable() {
         
           
                
-        foreach($this->getServer()->getOnlinePlayers() as $p){
+      
         if($sender instanceof Player){
         if(isset($args[0])) {
                 $amount = $args[0];
-       foreach($args as $item){
+                foreach($args as $item(){
+        foreach($this->getServer()->getOnlinePlayers() as $p){
         $p->getInventory()->addItem(Item::get(Item::SLIMEBALL,0,$item));
+       }
+        }
         $p->sendMessage($sender->getName()." gave you ".$amount." CrateKeys!");
         return true;
-                }
                 }else{
                 $sender->sendMessage("usage: /givekey (amount)");
                 }
@@ -38,7 +40,7 @@ public function onEnable() {
       $sender->sendMessage("Please do this command in-game");
       return false;
                 }
-                }
-                }
-                }
-                }
+		 }
+		 }
+}
+              
