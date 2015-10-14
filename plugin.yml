@@ -1,0 +1,10 @@
+name: GiveKey
+main: GK\Main
+version: "1.0_Beta"
+api: [1.12.0]
+load: POSTWORLD
+author: SavionLegendZzz
+commands:
+ givekey:
+  permission: gk.command.gk
+  description: GiveKey main command
