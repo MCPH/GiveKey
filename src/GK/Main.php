@@ -10,10 +10,13 @@ use pocketmine\command\CommandSender;
 use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\command\ConsoleCommandSender;
+use pocketmine\utils\TextFormat;
 class Main extends PluginBase implements Listener
 {
 	public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+		$this->getLogger()->info(TextFormat::YELLOW . "[" . TextFormat::GOLD . "GiveKey" . TextFormat::YELLOW. "] " . TextFormat::GREEN . "Plugin has been enabled!");
+		$this->getLogger()->info(TextFormat::YELLOW . "[" . TextFormat::GOLD . "GiveKey" . TextFormat::YELLOW. "] " . TextFormat::GREEN . "Created by " . TextFormat::WHITE . "SavionLegendZzz");
 	}
 	
 	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
